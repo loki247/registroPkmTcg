@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tipo extends Model
 {
     use HasFactory;
-    protected $table = "tipo";
+    protected $table = "cartas.tipo";
     protected $primaryKey = "id";
 
     public static function getTipos(){

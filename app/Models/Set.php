@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Set extends Model
 {
     use HasFactory;
-    protected $table = "set";
+    protected $table = "cartas.set";
     protected $primaryKey = "id";
 
     public static function getSets(){

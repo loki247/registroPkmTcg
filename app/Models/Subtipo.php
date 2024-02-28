@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Subtipo extends Model
 {
     use HasFactory;
-    protected $table = "subtipo";
+    protected $table = "cartas.subtipo";
     protected $primaryKey = "id";
 
     public static function getSubtipos(){

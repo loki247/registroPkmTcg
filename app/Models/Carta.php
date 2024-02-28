@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Carta extends Model
 {
     use HasFactory;
-    protected $table = "carta";
+    protected $table = "cartas.carta";
     protected $primaryKey = "id";
 
     public static function getCartas(){
@@ -21,8 +21,9 @@ class Carta extends Model
             "set.nombre_set",
             "carta.url_img_small",
             "rareza.nombre_rareza")
-            ->leftjoin("set", "carta.id_edicion", "=", "set.id")
-            ->leftjoin("rareza", "carta.id_rareza", "=", "rareza.id")
+            ->leftjoin("cartas.set", "carta.id_edicion", "=", "set.id")
+            ->leftjoin("cartas.rareza", "carta.id_rareza", "=", "rareza.id")
+            ->orderBy("set.nombre_set", "ASC")
             ->get();
 
         return $cartas;

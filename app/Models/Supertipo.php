@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Supertipo extends Model
 {
     use HasFactory;
-    protected $table = "supertipo";
+    protected $table = "cartas.supertipo";
     protected $primaryKey = "id";
 
     public static function getSupertipos(){

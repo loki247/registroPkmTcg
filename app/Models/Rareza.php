@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Rareza extends Model
 {
     use HasFactory;
-    protected $table = "rareza";
+    protected $table = "cartas.rareza";
     protected $primaryKey = "id";
 
     public static function getRarezas(){
